@@ -41,7 +41,7 @@ var app = {
 
          
 
-			window.plugins.PushbotsPlugin.initialize("5eb9b8fc93f4a779a063bd42", {"android":{"sender_id":"263875828264"}});
+			window.plugins.PushbotsPlugin.initialize("5eb9bc386baca65b25535e2a", {"android":{"sender_id":"263875828264"}});
 			
 	 
 
