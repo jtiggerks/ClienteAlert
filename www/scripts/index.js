@@ -37,13 +37,17 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+        	alert(1);
+        	
 			var Pushbots = PushbotsPlugin.initialize("5eb9ac535639cb6ebb770579", {"android":{"sender_id":"114465984133"}});
 			
 			window.plugins.PushbotsPlugin.on("registered", function(token){
-				console.log("Registration Id:" + token);
+				alert("Registration Id:" + token);
 			});
 
-			
+
+			alert(2);
+
 			Pushbots.on("registered", function(token){
 				if((localStorage.getItem('notificacoes') == 1)){
 					Pushbots.untag("active");
@@ -57,6 +61,9 @@ var app = {
 			});
 			
 			Pushbots.getRegistrationId(function(token){
+
+				alert(3);
+
 				if((localStorage.getItem('notificacoes') == 1)){
 					Pushbots.untag("active");
 					Pushbots.tag("inactive");
