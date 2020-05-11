@@ -39,44 +39,11 @@ var app = {
         app.receivedEvent('deviceready');
 
 
-        	alert(1);
+         
 
 			window.plugins.PushbotsPlugin.initialize("5eb9b8fc93f4a779a063bd42", {"android":{"sender_id":"263875828264"}});
 			
-			alert(12);
-			
-			window.plugins.PushbotsPlugin.on("registered", function(token){
-				alert("Registration Id:" + token);
-			});
-
-
-			alert(2);
-
-			window.plugins.PushbotsPlugin.on("registered", function(token){
-				if((localStorage.getItem('notificacoes') == 1)){
-					window.plugins.PushbotsPlugin.untag("active");
-					window.plugins.PushbotsPlugin.tag("inactive");
-				}
-				else{
-					window.plugins.PushbotsPlugin.untag("inactive");
-					window.plugins.PushbotsPlugin.tag("active");
-				}
-
-			});
-			
-			window.plugins.PushbotsPlugin.getRegistrationId(function(token){
-
-				alert(3);
-
-				if((localStorage.getItem('notificacoes') == 1)){
-					window.plugins.PushbotsPlugin.untag("active");
-					window.plugins.PushbotsPlugin.tag("inactive");
-				}
-				else{
-					window.plugins.PushbotsPlugin.untag("inactive");
-					window.plugins.PushbotsPlugin.tag("active");
-				}
-			});
+	 
 
 
 /*
