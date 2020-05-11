@@ -36,8 +36,13 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
-			var Pushbots = PushbotsPlugin.initialize("5eb9a79f5639cb6ebb770575", {"android":{"sender_id":"114465984133"}});
+
+			var Pushbots = PushbotsPlugin.initialize("5eb9ac535639cb6ebb770579", {"android":{"sender_id":"114465984133"}});
+			
+			window.plugins.PushbotsPlugin.on("registered", function(token){
+				console.log("Registration Id:" + token);
+			});
+
 			
 			Pushbots.on("registered", function(token){
 				if((localStorage.getItem('notificacoes') == 1)){
