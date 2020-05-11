@@ -38,9 +38,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+
         	alert(1);
 
-			window.plugins.PushbotsPlugin.initialize("5eb9ac535639cb6ebb770579", {"android":{"sender_id":"114465984133"}});
+			window.plugins.PushbotsPlugin.initialize("5eb9b8fc93f4a779a063bd42", {"android":{"sender_id":"263875828264"}});
+			
+			alert(12);
 			
 			window.plugins.PushbotsPlugin.on("registered", function(token){
 				alert("Registration Id:" + token);
