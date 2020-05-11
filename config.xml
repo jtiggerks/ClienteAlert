@@ -69,10 +69,9 @@
     <!-- Core plugins -->
     
     
-    
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.0.0" />
-	<gap:plugin name="pushbots-cordova-plugin" source="npm" />
-	<gap:plugin name="org.apache.cordova.statusbar" source="npm"/>
+     
+	<gap:plugin name="pushbots-cordova-plugin"  />
+ 
 	
 	
     <!-- Third party plugins -->
